@@ -1,0 +1,22 @@
+          
+<div style="width: 800px;">
+    <div *ngIf="showHeader" class="header">
+        <span class="title-size">Angular Tooltip Demo</span>
+    </div>
+    <div [class.adjust-top]="showHeader">
+        <button type="button" class="btn btn-success button-align" (click)="toggleHeader()">&#160;{{buttonLabel}}&#160;</button>
+        <div class="description-panel">Page Other Element 1 </div>
+        <div style="display:flex">
+            <div class="description-panel">Page Other Element 2 </div>
+            <div ngexTooltip="This tootip can automatically be positioned." autoBottomOffset="60" 
+                 class="tooltip-host">
+                Tootip Example - Host
+            </div>
+        </div>
+
+        <div class="description-panel">Page Other Element 3 </div>
+    </div>
+</div>
+
+
+
