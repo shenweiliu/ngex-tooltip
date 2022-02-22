@@ -1,0 +1,52 @@
+/*ngex-tooltip styles*/
+.ngex-tooltip {
+    position: absolute; 
+    font-size: 14px;
+    text-align: center;
+    color: #f8f8f2;
+    padding: 3px 8px;
+    background: #007dc6;
+    border-radius: 4px;
+    z-index: 1080;
+    opacity: 0;
+}
+
+.ngex-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+}
+
+.ngex-tooltip-top:after {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: #007dc6 transparent transparent transparent;
+}
+
+.ngex-tooltip-top-end:after {
+    top: 100%;    
+    left: 92%;
+    border-width: 5px;
+    border-color: #007dc6 transparent transparent transparent;
+}
+
+.ngex-tooltip-bottom:after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: transparent transparent #007dc6 transparent;
+}
+
+.ngex-tooltip-bottom-end:after {
+    bottom: 100%;
+    left: 92%;
+    border-width: 5px;
+    border-color: transparent transparent #007dc6 transparent;
+}
+
+.ngex-tooltip-show {
+    opacity: 1;
+}
