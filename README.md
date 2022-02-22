@@ -1,6 +1,6 @@
 # ngex-tooltip
 
-Source code and demo application of the Angular ngex-tooltip  
+The repository contains the source code and demo application of the Angular ngex-tooltip. Please see the details of the ngex-tooltip package on the [npm site](https://www.npmjs.com/package/ngex-tooltip).  
 
 ## Angular Version Compatibility
 
