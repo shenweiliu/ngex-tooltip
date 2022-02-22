@@ -20,19 +20,27 @@
 }
 
 .button-align {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
 }
 
+.radio-button-panel {
+    margin-top: 1rem;
+}
+
+.radio-label {
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+}
 /*tooltip demo*/
 .description-panel {
     display: block;
-    margin: 30px;
-    padding: 15px;
-    width: 450px;
-    height: 180px;
+    margin: 2rem;
+    padding: 1rem 1rem 0.25rem 1rem;
+    width: 30rem;
+    height: auto;
     border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .tooltip-host {
@@ -57,7 +65,7 @@
     padding: 3px 8px;
     background: #007dc6;
     border-radius: 4px;
-    z-index: 1000;
+    z-index: 1080;
     opacity: 0;
 }
 
