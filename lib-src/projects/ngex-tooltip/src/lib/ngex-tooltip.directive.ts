@@ -25,6 +25,7 @@ export class NgexTooltipDirective {
        Change the *% value in the "*:after" CSS to obtain desired results.
     */
     @Input() maxWidth: string = '';
+    @Input() arrowPosition: string = 'center'; //'center' or 'left'
     tooltip!: HTMLElement;  
     
     constructor(private el: ElementRef, private renderer: Renderer2) { }
@@ -85,7 +86,7 @@ export class NgexTooltipDirective {
         let bottomPos: number = hostPos.bottom + parseInt(this.offsetBottom);
         if (topPos - parseInt(this.autoBottomOffset) > 0) {
             //Placed to host top.
-            tipTop = topPos;
+            tipTop = topPos;            
             this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-bottom`);
             this.renderer.addClass(this.tooltip, `${this.baseCssClass}-top`);
         }
@@ -99,28 +100,27 @@ export class NgexTooltipDirective {
         let tipLeft: number = hostPos.left + 2;
         //leftPos = hostPos.left + (hostPos.width - tooltipPos.width) / 2;
         
-        //Too right from window edge.
-        if ((tipLeft + hostPos.width) < window.innerWidth) {
-            if (topPos - parseInt(this.autoBottomOffset) > 0) {
-                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-top-end`);
-                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-top`)
+        //Tooltip arrow positions.
+        if ((tipLeft + adjMaxWidth) < window.innerWidth) {
+            this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-arrow-end`);
+            if (this.arrowPosition == 'center') {
+                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-arrow-center`);
             }
-            else {
-                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-bottom-end`);
-                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-bottom`);
+            else if (this.arrowPosition == 'left') {
+                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-arrow-left`);
             }
         }
-        else {            
-            tipLeft = window.innerWidth - hostPos.width - 15; //15px for possible scrollbar width.
-
-            if (topPos - parseInt(this.autoBottomOffset) > 0) {
-                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-top`);
-                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-top-end`)
+        else {
+            //Too right from window edge.
+            tipLeft = window.innerWidth - adjMaxWidth - 15; //15px for possible scrollbar width.
+            
+            if (this.arrowPosition == 'center') {
+                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-arrow-center`);
             }
-            else {
-                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-bottom`);
-                this.renderer.addClass(this.tooltip, `${this.baseCssClass}-bottom-end`);
+            else if (this.arrowPosition == 'left') {
+                this.renderer.removeClass(this.tooltip, `${this.baseCssClass}-arrow-left`);                
             }
+            this.renderer.addClass(this.tooltip, `${this.baseCssClass}-arrow-end`);
         }        
 
         //Set tooltip position.        
