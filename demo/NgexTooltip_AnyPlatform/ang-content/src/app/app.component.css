@@ -58,7 +58,7 @@
 
 /*ngex-tooltip styles*/
 .ngex-tooltip {
-    position: absolute; 
+    position: absolute;
     font-size: 14px;
     text-align: center;
     color: #f8f8f2;
@@ -73,38 +73,32 @@
     content: "";
     position: absolute;
     border-style: solid;
+    border-width: 5px;
 }
 
 .ngex-tooltip-top:after {
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-color: #007dc6 transparent transparent transparent;
-}
-
-.ngex-tooltip-top-end:after {
     top: 100%;    
-    left: 92%;
-    border-width: 5px;
     border-color: #007dc6 transparent transparent transparent;
 }
 
 .ngex-tooltip-bottom:after {
     bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
     border-color: transparent transparent #007dc6 transparent;
 }
 
-.ngex-tooltip-bottom-end:after {
-    bottom: 100%;
+.ngex-tooltip-arrow-center:after {
+    left: 50%;
+    margin-left: -5px;
+}
+.ngex-tooltip-arrow-left:after {
+    left: 5%;
+    margin-left: -5px;
+}
+.ngex-tooltip-arrow-end:after {
     left: 92%;
-    border-width: 5px;
-    border-color: transparent transparent #007dc6 transparent;
 }
 
 .ngex-tooltip-show {
     opacity: 1;
 }
+
