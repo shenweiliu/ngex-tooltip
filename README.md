@@ -8,4 +8,6 @@ The applications are set with the Angular 13. It works well with the `ngex-toolt
 
 The base directive code files should work with the Angular versions 8 - 13. If you need to have the `ngex-tooltip` work with any previous version other than 13, you can update the package.json for the required versions and update the `node_modules` by running the `npm install` for the `ang-content` project. 
     
- 
+## dev-src/NgexTooltip_11_AspNet_DML 
+
+This section contains source code files for an ASP.NET web application in the form of dual-module loader structure. The application directly calls the `ngex-tooltip.directive.ts`, not the npm package library file. To set up the project with the Visual studio, please see the [AngularDualModuleLoaders](https://github.com/shenweiliu/AngularDualModuleLoaders) for the details. 
