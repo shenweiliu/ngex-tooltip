@@ -49,8 +49,6 @@ This section contains source code files for an ASP.NET web application in the fo
 
    -  `arrowPosition`: the tooltip pointing arrow placement. The available values are 'center' and 'left'. The default value is 'center'.
    
- 5. Styles
- 
- The style settings for the demo application are all in the tooltip-sample.css or in individual project's app.component.css. Feel free to modify styles for your use.
+ 5. Styles: The style settings for the demo application are all in the tooltip-sample.css or in individual project's app.component.css. Feel free to modify styles for your use.
  
  
