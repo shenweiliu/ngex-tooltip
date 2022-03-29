@@ -1,0 +1,103 @@
+/*header settings*/
+.adjust-top {
+    margin-top: 60px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Set the fixed height */
+    height: 60px;
+    background-color: #f5f5f5;
+    border-color: #e7e7e7;
+    color: #777;
+    padding: 10px 20px 10px 6%;
+}
+
+.header .title-size {
+    font-size: 22px;
+}
+
+.button-align {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+.radio-button-panel {
+    margin-top: 1rem;
+}
+
+.radio-label {
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+}
+/*tooltip demo*/
+.description-panel {
+    display: block;
+    margin: 2rem;
+    padding: 1rem 1rem 0.25rem 1rem;
+    width: 30rem;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.tooltip-host {
+    display: inline-block;
+    margin: 40px 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    border-width: 2px;
+    border-color: darkred;
+}
+
+/*ngex-tooltip styles*/
+.ngex-tooltip {
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    color: #f8f8f2;
+    padding: 3px 8px;
+    background: #007dc6;
+    border-radius: 4px;
+    z-index: 1080;
+    opacity: 0;
+}
+
+.ngex-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.ngex-tooltip-top:after {
+    top: 100%;    
+    border-color: #007dc6 transparent transparent transparent;
+}
+
+.ngex-tooltip-bottom:after {
+    bottom: 100%;
+    border-color: transparent transparent #007dc6 transparent;
+}
+
+.ngex-tooltip-arrow-center:after {
+    left: 50%;
+    margin-left: -5px;
+}
+.ngex-tooltip-arrow-left:after {
+    left: 5%;
+    margin-left: -5px;
+}
+.ngex-tooltip-arrow-end:after {
+    left: 92%;
+}
+
+.ngex-tooltip-show {
+    opacity: 1;
+}
