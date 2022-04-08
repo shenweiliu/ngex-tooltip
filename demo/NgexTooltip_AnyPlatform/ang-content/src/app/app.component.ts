@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
     showHeader: boolean = false;
     buttonLabel: string = 'Show Header';
     headerOffsetStatus: string = '0';
-    headerOffsetValue: number = 0;
+    headerOffsetValue: string = '0';
 
     ngOnInit() {
         this.headerOffsetStatus = '1';
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
             this.buttonLabel = 'Show Header';
 
             //Reset header height.
-            this.headerOffsetValue = 0;
+            this.headerOffsetValue = '0';
         }
         else {
             this.buttonLabel = 'Hide Header';
@@ -34,13 +34,13 @@ export class AppComponent implements OnInit {
     headerOffsetChanged(value: string) {
         if (value == '1') {
             this.headerOffsetStatus == '1';
-            this.headerOffsetValue = 0;
+            this.headerOffsetValue = '0';
         }
         else if (value == '2') {
             this.headerOffsetStatus == '2';
 
             //Header height value is fixed to 60px.
-            this.headerOffsetValue = 60;
+            this.headerOffsetValue = '60';
         }
     }
 }
