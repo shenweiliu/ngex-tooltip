@@ -54,4 +54,7 @@ The pure Angular source code files that can be copied to, and run in, any websit
    
  5. Styles: The style settings for the demo application are all in the tooltip-sample.css or in individual project's app.component.css. Feel free to modify styles for your use.
  
- 
+## Run Demo on stackblitz.com 
+
+The [demo sample application](https://angular-ivy-qddqt1.stackblitz.io) is on the stackblitz.com. Follow the instructions on the page to see various test cases.
+
